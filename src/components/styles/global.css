@@ -1,0 +1,155 @@
+
+h1 {
+    color: rgba(15, 15, 15, 0.85);
+    padding: 15px 15px;
+    
+}
+p {
+    color: rgba(15, 15, 15, 0.85);
+}
+.main{
+    display: flex;
+    min-height: 1000px;
+    background: rgba(242, 240, 240, 0.541);
+    padding :50px;
+}
+.main .contents {
+    display: border-box;
+    width: max(800px,30%);
+    min-width: 500px;
+    /*左も右も20%ずつ*/
+    margin: 0px 50px 0px auto;
+    /*今回はpaddingはゼロに*/
+    padding: 0px 50px;
+    /* background-color: white; */
+    border-radius: 10px 10px 10px 10px;
+}
+.main .contents .title{
+    display: border-box;
+    width: 100%;
+    /* max-width: 1000px; */
+    /* min-width: 500px; */
+    margin: 10px auto 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px 10px 10px 10px;
+    /* background-color: rgba(0, 0, 0, 0.189);
+    color: rgba(255, 0, 0); */
+}
+.main .contents .body{
+    display: border-box;
+    width: 100%;
+    /* max-width: 1000px; */
+    /* min-width: 500px; */
+    margin: 0px auto 0px auto;
+    padding: 10px 20px;
+    /* border-radius: 10px 10px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.189);
+    color: rgba(255, 0, 0); */
+}
+.main .contents .body h2{
+    display: border-box;
+    /* max-width: 1000px; */
+    /* min-width: 500px; */
+    padding: 0.8rem 0;
+    margin-bottom: 0.2rem;
+    background-image: linear-gradient(109.6deg, rgb(45, 86, 179) 11.2%, rgb(62, 72, 97) 91.1%);
+    background-repeat: no-repeat;
+    background-size: 100% 8px;
+    background-position: bottom;
+    color: rgba(15, 15, 15, 0.85);
+    font-weight: bold;
+    font-size: 26px;
+
+}
+ .postdate{
+    display: border-box;
+    width: 100%;
+    /* max-width: 1000px; */
+    /* min-width: 500px; */
+    max-width:1500pxpx;
+    margin: 0px auto 0px auto;
+    padding: 10px 20px;
+    text-align:  right; 
+    /* border-radius: 10px 10px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.189);
+    color: rgba(255, 0, 0); */
+}
+ .listTitle{
+  text-align:center;
+  width: 100%;
+  /* max-width: 1000px; */
+  /* min-width: 500px; */
+  margin: 10px auto 10px auto;
+  padding: 10px 0px;
+  display: border-box;
+  background: rgba(0, 0, 0, 0.189);
+  border-radius: 10px 10px 10px 10px;
+}
+ .article{
+  display: flex;
+  display: border-box;
+  width: 90%;
+  /* max-width: 1000px; */
+  /* min-width: 500px; */
+  margin: 10px auto 10px auto;
+  padding: 15px 15px;
+  /* border-top: solid 1px;
+  border-bottom: solid 1px; */
+  background-color: white;
+  align-items: center;
+}
+ .article .image {
+  display: border-box;
+  vertical-align: middle;
+  width: 12vmax; /*画像サイズ指定*/
+  max-width:100%;
+  height:auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+ .article .right {
+  display: border-box;
+  width: auto;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+ .article .title {
+    display: border-box;
+  margin: 8px 0px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 28px;
+}
+ .article .text {
+    display: border-box;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+ .article .date{
+    display: border-box;
+  margin: 5px auto;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+}
+
+.main .sidebar{
+    display: border-box;
+    width:350px;
+    min-width:350px;
+    height: 900px;
+    /* background: rgba(0, 0, 0, 0.189); */
+    border-radius: 10px 10px 10px 10px;
+    /*左も右も20%ずつ*/
+    margin: 0px auto 0px 20px;
+    /*今回はpaddingはゼロに*/
+    padding: 5px 30px;
+
+}
+
+

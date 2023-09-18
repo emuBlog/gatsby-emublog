@@ -1,0 +1,60 @@
+.header{
+    margin: 0px 0px; 
+    display: border-box;
+    height: 280px;
+    width: auto;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.189);
+    text-align:center;
+}
+.header .blogtitle{
+    display: border-box;
+    display: block;
+    /* padding: 5px 50px; */
+    margin: 0 auto;
+    height:  280px;
+    width: 1000px;
+    font-size: 20px;
+    text-align:center;
+} 
+.header .navigation{
+    padding: 0px 0px;
+    margin: 0 auto;
+    display: border-box;
+    max-width: 1700px;
+    /* background: rgba(0, 0, 0, 0.541); */
+    text-align:center;
+}
+
+.header .navigation ul{
+    display: table;
+    margin: 0 auto;
+    padding: 0 ;
+    width: 80%;
+    text-align: center;
+}
+.header .navigation li{
+    display: table-cell;
+    padding: 0 auto;
+    width :500px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+.header .navigation a{
+    display: block;
+    /* width: 100%; */
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0px;
+}
+.header .navigation a:hover{
+    display: block;
+    /* width: 100%; */
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.541);
+    padding-bottom: 0px;
+}
+.header .navigation li:hover{
+    color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.189);
+}
+

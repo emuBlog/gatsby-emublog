@@ -1,0 +1,57 @@
+.sidebar{
+  /* display: block; */
+  padding: 5px 50px;
+  margin: 5px auto;
+  /* height: 900px;  */
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.189); */
+  font-size: 20px;
+  text-align:center;
+  /* position:fixed; */
+}
+
+.ListTitle{
+  text-align:center;
+  margin: 0px;
+  padding: 5px 0px;
+  display: border-box;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.189);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.article{
+  height:150;
+  display: flex;
+  display: border-box;
+  width: auto;
+  margin: 5px 5px;
+  padding: 0px 0px;
+  /* border-top: solid 1px; */
+  /* border-bottom: solid 1px; */
+  background-color: white;
+  align-items: center;
+}
+.article .frame {
+  vertical-align: middle;
+  width: 150px; /*画像サイズ指定*/
+  min-width: 150px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+  
+  
+}
+
+.article .right {
+  width: 100%;
+  margin: 0 0 0 0px;
+  padding: 0;
+}
+.article .title{
+  margin: 8px 0px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 15px;
+}

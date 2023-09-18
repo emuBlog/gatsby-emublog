@@ -1,0 +1,10 @@
+.footer{
+    /* display: block; */
+    padding: 5px 50px;
+    margin: 0px auto;
+    height: 200px;
+    width: auto;
+    background: rgba(0, 0, 0, 0.189);
+    font-size: 20px;
+    text-align:center;
+}
