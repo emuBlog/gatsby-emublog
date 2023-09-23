@@ -1,11 +1,12 @@
 .header{
     margin: 0px 0px; 
     display: border-box;
-    height: 168px;
+    height: fit-content;
     width: auto;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.189);
-    text-align:center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(210, 210, 210);
 }
 .header .blogtitle{
     display: border-box;
@@ -19,10 +20,9 @@
 } 
 .header .navigation{
     padding: 0px 0px;
-    margin: 0 auto;
+    margin: 0px auto;
     display: border-box;
-    max-width: 1700px;
-    /* background: rgba(0, 0, 0, 0.541); */
+    width: 100%;
     text-align:center;
 }
 
@@ -30,14 +30,14 @@
     display: table;
     margin: 0 auto;
     padding: 0 ;
-    width: 80%;
+    width: min(800px,80%);
     text-align: center;
 }
 .header .navigation li{
     display: table-cell;
     padding: 0 auto;
-    width :500px;
-    background-color: rgba(0, 0, 0, 0.541);
+    width :50%;
+    background-color: rgb(130, 130, 130);
 }
 .header .navigation a{
     display: block;
@@ -50,12 +50,11 @@
     display: block;
     /* width: 100%; */
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.541);
+    color: rgba(15, 15, 15, 0.85);
     padding-bottom: 0px;
 }
 .header .navigation li:hover{
-    color: rgba(0, 0, 0, 0.541);
-    background-color: rgba(0, 0, 0, 0.189);
+    background-color: rgb(235, 235, 235);
 }
 
 @media screen and (max-width:750px) {
@@ -64,28 +63,28 @@
 	.header{
         margin: 0px 0px; 
         display: border-box;
-        height: 168px;
-        width: 100%;
+        height: fit-content;
+        width: auto;
         font-size: 20px;
-        background-color: rgba(0, 0, 0, 0.189);
-        text-align:center;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(210, 210, 210);
     }
     .header .blogtitle{
         display: border-box;
         display: block;
         /* padding: 5px 50px; */
         margin: 0 auto;
-        height:  168px;
-        width: 600px;
+        max-width:100%;
+        height:auto;
         font-size: 20px;
         text-align:center;
     } 
     .header .navigation{
         padding: 0px 0px;
-        margin: 0 auto;
+        margin: 0px auto;
         display: border-box;
-        /* max-width: 1700px; */
-        /* background: rgba(0, 0, 0, 0.541); */
+        width: 100%;
         text-align:center;
     }
     
@@ -93,32 +92,28 @@
         display: table;
         margin: 0 auto;
         padding: 0 ;
-        width: 80%;
+        width: min(800px,80%);
         text-align: center;
     }
     .header .navigation li{
         display: table-cell;
         padding: 0 auto;
-        width :500px;
-        background-color: rgba(0, 0, 0, 0.541);
+        width :50%;
+        background-color: rgb(130, 130, 130);
     }
     .header .navigation a{
         display: block;
-        /* width: 100%; */
         text-decoration: none;
         color: white;
         padding-bottom: 0px;
     }
     .header .navigation a:hover{
         display: block;
-        /* width: 100%; */
         text-decoration: none;
-        color: rgba(0, 0, 0, 0.541);
+        color: rgba(15, 15, 15, 0.85);
         padding-bottom: 0px;
     }
     .header .navigation li:hover{
-        color: rgba(0, 0, 0, 0.541);
-        background-color: rgba(0, 0, 0, 0.189);
+        background-color: rgb(235, 235, 235);
     }
 }
-

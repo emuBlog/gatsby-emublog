@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { header, blogtitle, navigation } from './styles/header.module.css'
+import './styles/global.css'
+
 import blogTiteleImage from '../images/blog_title_image.png';
 // import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 const _ = require("lodash")

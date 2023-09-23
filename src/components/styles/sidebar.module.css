@@ -1,36 +1,25 @@
-.sidebar{
-  /* display: block; */
-  padding: 5px 50px;
-  margin: 5px auto;
-  /* height: 900px;  */
-  width: 100%;
-  /* background: rgba(0, 0, 0, 0.189); */
-  font-size: 20px;
-  text-align:center;
-  /* position:fixed; */
-}
-
 .ListTitle{
   text-align:center;
   margin: 0px;
   padding: 5px 0px;
   display: border-box;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.189);
+  width: 300px;
+  background-color: rgb(200, 200, 200);
   border-radius: 10px 10px 10px 10px;
 }
 
 .article{
-  height:150;
+  height:150px;
   display: flex;
   display: border-box;
-  width: auto;
+  width: 300px;
   margin: 5px 5px;
   padding: 0px 0px;
   /* border-top: solid 1px; */
   /* border-bottom: solid 1px; */
   background-color: white;
   align-items: center;
+  border-radius: 10px 10px 10px 10px;
 }
 .article .frame {
   vertical-align: middle;
@@ -40,8 +29,6 @@
   padding: 0px;
   overflow: hidden;
   position: relative;
-  
-  
 }
 
 .article .right {
@@ -53,5 +40,89 @@
   margin: 8px 0px;
   padding: 0;
   font-weight: bold;
-  font-size: 15px;
+}
+
+@media screen and (max-width:1200px) {
+  .ListTitle{
+    text-align:center;
+    margin: 0px;
+    padding: 5px 0px;
+    display: border-box;
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px 10px 10px 10px;
+  }
+  
+  .article{
+    display: flex;
+    display: border-box;
+    width: 85%;
+    margin: 10px auto 10px auto;
+    padding: 10px 30px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .article .frame {
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .article .right {
+    width: auto;
+    margin: 0 0 0 0px;
+    padding: 0;
+  }
+  .article .title{
+    width: 100%;
+    margin: 8px 0px;
+    padding: 0;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width:640px) {
+  .ListTitle{
+    text-align:center;
+    margin: 0px;
+    padding: 5px 0px;
+    display: border-box;
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px 10px 10px 10px;
+  }
+  
+  .article{
+    display: block;
+    display: border-box;
+    width: 95%;
+    height: fit-content;
+    margin: 10px auto 10px auto;
+    padding: 10px 0px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .article .frame {
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .article .right {
+    width: auto;
+    margin: 0 0 0 0px;
+    padding: 0;
+  }
+  .article .title{
+    width: 90%;
+    margin: 8px auto;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 105%;
+  }
 }

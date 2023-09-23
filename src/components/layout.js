@@ -4,13 +4,14 @@ import Footer from './footer';
 import Sidebar from './sidebar';
 import {Helmet} from "react-helmet";
 
-import './styles/global.css'
+
 
 const Layout = ({ children }) => {
   return (
     <div>
       <Helmet>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
+      {/* <link rel="stylesheet" href="./styles/global.css"></link> */}
       </Helmet>
       <Header />
       <div className = 'main'>

@@ -24,7 +24,6 @@ p {
 .main .contents {
     display: border-box;
     width: max(800px,30%);
-    min-width: 500px;
     margin: 0px 50px 0px auto;
     padding: 0px 50px;
     border-radius: 10px 10px 10px 10px;
@@ -103,20 +102,20 @@ p {
   margin: 0 0 0 20px;
   padding: 0;
 }
- .article .title {
+ .article .pagetitle {
     display: border-box;
   margin: 8px 0px;
   padding: 0;
   font-weight: bold;
 }
  .article .text {
-    display: border-box;
-  margin: 0 0 0 20px;
+  display: border-box;
+  margin: 0px auto;
   padding: 0;
 }
 
  .article .date{
-    display: border-box;
+  display: border-box;
   margin: 5px auto;
   padding: 0;
   font-weight: bold;
@@ -126,32 +125,30 @@ p {
 .main .sidebar{
     display: border-box;
     width:350px;
-    min-width:350px;
     height: 900px;
     border-radius: 10px 10px 10px 10px;
     margin: 0px auto 0px 20px;
     padding: 5px 30px;
-
 }
 
-
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
   .main{
     display:flex;
+    width: 100%;
     flex-flow: column;
     min-height: 1000px;
     background: rgba(242, 240, 240, 0.541);
-    padding :50px;
+    margin : 0px 0px;
+    padding:50px 0px;
 }
 .main .contents {
     display: border-box;
-    width: max(500px,50%);
-    min-width: 500px;
+    width: 70%;
     margin: 0px auto;
     padding: 0px 0px;
     border-radius: 10px 10px 10px 10px;
 }
-.main .contents .pagetitle{
+.main .contents .title{
   display: border-box;
     width: 100%;
     margin: 10px 0px;
@@ -198,7 +195,7 @@ p {
   border-radius: 10px 10px 10px 10px;
 }
  .article{
-  display: flex;
+  /* display: flex; */
   display: border-box;
   width: 85%;
   margin: 10px auto 10px auto;
@@ -209,8 +206,7 @@ p {
 }
  .article .image {
   display: border-box;
-  vertical-align: middle;
-  width: 12vmax; /*画像サイズ指定*/
+  /* vertical-align: middle; */
   max-width:100%;
   height:auto;
   margin: 0;
@@ -225,20 +221,21 @@ p {
   margin: 0 0 0 20px;
   padding: 0;
 }
- .article .title {
-    display: border-box;
+ .article .pagetitle {
+  width: 90%;
+  display: border-box;
   margin: 8px 0px;
   padding: 0;
   font-weight: bold;
 }
  .article .text {
-    display: border-box;
-  margin: 0 0 0 20px;
+  display: border-box;
+  margin: 0px auto;
   padding: 0;
 }
 
  .article .date{
-    display: border-box;
+  display: border-box;
   margin: 5px auto;
   padding: 0;
   font-weight: bold;
@@ -247,8 +244,142 @@ p {
 
 .main .sidebar{
   display: border-box;
-  width: max(500px,50%);
-  min-width: 500px;
+  width: 70%;
+  margin: 0px auto;
+  padding: 0px 0px;
+  border-radius: 10px 10px 10px 10px;
+
+}
+}
+@media screen and (max-width:640px) {
+  h1 {
+  color: rgba(15, 15, 15, 0.85);
+  font-size: 140%;
+  }
+  h2 {
+  color: rgba(15, 15, 15, 0.85);
+  font-size: 105%;
+  }
+  h3 {
+  color: rgba(15, 15, 15, 0.85);
+  font-size: 88%;
+  }
+p {
+    color: rgba(15, 15, 15, 0.85);
+    font-size: 70%;
+}
+  .main{
+    display:flex;
+    width: 100%;
+    flex-flow: column;
+    height: fit-content;
+    background: rgba(242, 240, 240, 0.541);
+    margin : 0px 0px;
+    padding:50px 0px;
+}
+.main .contents {
+    display: border-box;
+    width: 80%;
+    margin: 0px auto;
+    padding: 0px 0px;
+    border-radius: 10px 10px 10px 10px;
+}
+.main .contents .title{
+  display: border-box;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    border-radius: 10px 10px 10px 10px;
+}
+.main .contents .body{
+  display: border-box;
+  width: 85%;
+  margin: 10px auto 10px auto;
+  padding: 10px 30px;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+
+} 
+ .main .contents .body h2{
+    display: border-box;
+    padding: 0.8rem 0;
+    margin-bottom: 0.2rem;
+    background-image: linear-gradient(109.6deg, rgb(45, 86, 179) 11.2%, rgb(62, 72, 97) 91.1%);
+    background-repeat: no-repeat;
+    background-size: 100% 8px;
+    background-position: bottom;
+    color: rgba(15, 15, 15, 0.85);
+    font-weight: bold;
+}
+ .postdate{
+    display: border-box;
+    width: 100%;
+    max-width:1500px;
+    margin: 0px auto 0px auto;
+    padding: 10px 20px;
+    text-align:  right; 
+    border-radius: 10px 10px 10px 10px;
+}
+.ListTitle{
+  text-align:center;
+  margin: 0px;
+  padding: 5px 0px;
+  display: border-box;
+  width: 100%;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.article{
+  display: block;
+  display: border-box;
+  width: 95%;
+  height: fit-content;
+  margin: 10px auto 10px auto;
+  padding: 10px 0px;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+}
+.article .frame {
+  vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.article .right {
+  width: auto;
+  margin: 0 0 0 0px;
+  padding: 0;
+  
+}
+.article .pagetitle{
+  width: 90%;
+  margin: 8px auto;
+  padding: 0px;
+  font-weight: bold;
+  font-size: 105%;
+}
+.article .text {
+  width: 90%;
+  display: border-box;
+  margin: 0px auto;
+  padding: 0px;
+}
+ .article .date{
+  display: border-box;
+  margin: 5px 10px;
+  padding: 0;
+  font-weight: bold;
+  text-align: right;
+}
+
+.main .sidebar{
+  display: border-box;
+  width: 80%;
   margin: 0px auto;
   padding: 0px 0px;
   border-radius: 10px 10px 10px 10px;
