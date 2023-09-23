@@ -23,7 +23,7 @@ const Header = ( ) => {
   return (
     <header>
       <div className={header}>
-      <figure className={blogtitle}><Link to="/"><img src = {blogTiteleImage} className ="blog-logo" alt = "ブログアイコン"/></Link></figure>
+      <Link to="/"><img src = {blogTiteleImage} className ="blog-logo" alt = "ブログアイコン"　class={blogtitle}/></Link>
         {/* <h1 className='title'>{data.site.siteMetadata.title}</h1> */}
         <nav className={navigation}>
           <ul>

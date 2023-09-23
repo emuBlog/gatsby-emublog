@@ -10,7 +10,7 @@ const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
   return (
     <Layout>
       {/* <GatsbyImage image={image} alt="Hero Image" /> */}
-      <h1 className='title'>{frontmatter.title}</h1>
+      <h1 className='pagetitle'>{frontmatter.title}</h1>
       <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
       <div className='postdate'>投稿日：{frontmatter.date}</div>
     </Layout>

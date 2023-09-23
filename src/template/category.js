@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout";
 import { Link, graphql } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import * as styles from '../components/styles/postlist.module.css';
+
 const _ = require("lodash")
 
 const Category = ({ pageContext,data}) => {
