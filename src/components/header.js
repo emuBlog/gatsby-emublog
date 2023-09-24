@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import { header, blogtitle, navigation } from './styles/header.module.css'
+import * as styles from './styles/header.module.css'
 import './styles/global.css'
 import {Helmet} from "react-helmet";
 
@@ -28,10 +28,10 @@ const Header = ( ) => {
       <Helmet>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
       </Helmet>
-      <div className={header}>
-      <Link to="/"><img src = {blogTiteleImage} className ="blog-logo" alt = "ブログアイコン"　class={blogtitle}/></Link>
+      <div className={styles.header}>
+      <Link to="/"><img src = {blogTiteleImage} className ={styles.blogtitle} alt = "ブログアイコン"　/></Link>
         {/* <h1 className='title'>{data.site.siteMetadata.title}</h1> */}
-        <nav className={navigation}>
+        <nav className={styles.navigation}>
           <ul>
             <li>
               <Link to="/">top</Link>

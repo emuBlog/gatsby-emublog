@@ -4,8 +4,6 @@ import Footer from './footer';
 import Sidebar from './sidebar';
 
 
-
-
 const Layout = ({ children }) => {
   return (
     <div>
