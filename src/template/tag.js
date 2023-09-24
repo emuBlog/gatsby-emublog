@@ -19,11 +19,11 @@ const Tag = ({ pageContext,data}) => {
             <figure　className='image'><GatsbyImage image={getImage(edge.node.frontmatter.hero_image)} alt="Hero Image" /></figure>
             </Link>
             <div className='right'>
-            <h2 className='title'>{/* mdファイルでslugに指定したURLに遷移 */}
+            <h2 className='pagetitle'>{/* mdファイルでslugに指定したURLに遷移 */}
                 <Link to={`/tag/${_.kebabCase(tag)}/${edge.node.frontmatter.slug}`}>
                 {edge.node.frontmatter.title}
             </Link></h2>
-            <div explain>{edge.node.frontmatter.article_explain}</div>
+            <p className='text'>{edge.node.frontmatter.article_explain}</p>
             <p className='date'>投稿日：{edge.node.frontmatter.date}</p>
             </div>
             
