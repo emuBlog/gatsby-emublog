@@ -2,14 +2,14 @@ import * as React from 'react';
 import Header from './header';
 import Footer from './footer';
 import Sidebar from './sidebar';
-
+import {Helmet} from "react-helmet";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      {/* <Helmet>
+      <Helmet>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
-      </Helmet> */}
+      </Helmet>
       <Header />
       <div className = 'main'>
         <div className='contents'>

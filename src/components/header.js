@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as styles from './styles/header.module.css'
 import './styles/global.css'
-import {Helmet} from "react-helmet";
 
 import blogTiteleImage from '../images/blog_title_image.png';
 // import { getImage, GatsbyImage } from 'gatsby-plugin-image';
@@ -25,9 +24,7 @@ const Header = ( ) => {
 
   return (
     <header>
-      <Helmet>
-      <meta name="viewport" content="width=device-width,initial-scale=1"/>
-      </Helmet>
+
       <div className={styles.header}>
       <Link to="/"><img src = {blogTiteleImage} className ={styles.blogtitle} alt = "ブログアイコン"　/></Link>
         {/* <h1 className='title'>{data.site.siteMetadata.title}</h1> */}
