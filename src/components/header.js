@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as styles from './styles/header.module.css'
 import './styles/global.css'
 
-import blogTiteleImage from '../images/blog_title_image.png';
+import blogTiteleImage from '../images/common/blog_title_image.png';
 // import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 const _ = require("lodash")
 
@@ -28,7 +28,7 @@ const Header = ( ) => {
       <div className={styles.header}>
       <Link to="/"><img src = {blogTiteleImage} className ={styles.blogtitle} alt = "ブログアイコン"　/></Link>
         {/* <h1 className='title'>{data.site.siteMetadata.title}</h1> */}
-        <nav className={styles.navigation}>
+        {/* <nav className={styles.navigation}>
           <ul>
             <li>
               <Link to="/">top</Link>
@@ -40,7 +40,7 @@ const Header = ( ) => {
         
             ))}
           </ul>
-        </nav>
+        </nav> */}
       </div>
       
     </header>

@@ -1,119 +1,23 @@
 .header{
     margin: 0px 0px; 
-    display: border-box;
+    display: flex;
     height: fit-content;
     width: auto;
     font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(210, 210, 210);
+    justify-content: left;
+    align-items: left;
+    border-bottom: solid 1px;
+    border-bottom-color: rgb(210, 210, 210);
+    /* background-color: rgb(210, 210, 210); */
 }
 .header .blogtitle{
     display: border-box;
     display: block;
     /* padding: 5px 50px; */
-    margin: 0 auto;
-    height:  168px;
-    width: 600px;
+    padding:10px;
+    max-width:180px;
+    height:auto;
     font-size: 20px;
     text-align:center;
 } 
-.header .navigation{
-    padding: 0px 0px;
-    margin: 0px auto;
-    display: border-box;
-    width: 100%;
-    text-align:center;
-}
 
-.header .navigation ul{
-    display: table;
-    margin: 0 auto;
-    padding: 0 ;
-    width: min(800px,80%);
-    text-align: center;
-}
-.header .navigation li{
-    display: table-cell;
-    padding: 0 auto;
-    width :50%;
-    background-color: rgb(130, 130, 130);
-}
-.header .navigation a{
-    display: block;
-    /* width: 100%; */
-    text-decoration: none;
-    color: white;
-    padding-bottom: 0px;
-}
-.header .navigation a:hover{
-    display: block;
-    /* width: 100%; */
-    text-decoration: none;
-    color: rgba(15, 15, 15, 0.85);
-    padding-bottom: 0px;
-}
-.header .navigation li:hover{
-    background-color: rgb(235, 235, 235);
-}
-
-@media screen and (max-width:750px) {
-
-	/*　この位置に記述する　*/
-	.header{
-        margin: 0px 0px; 
-        display: border-box;
-        height: fit-content;
-        width: auto;
-        font-size: 20px;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(210, 210, 210);
-    }
-    .header .blogtitle{
-        display: border-box;
-        display: block;
-        /* padding: 5px 50px; */
-        margin: 0 auto;
-        max-width:100%;
-        height:auto;
-        font-size: 20px;
-        text-align:center;
-    } 
-    .header .navigation{
-        padding: 0px 0px;
-        margin: 0px auto;
-        display: border-box;
-        width: 100%;
-        text-align:center;
-    }
-    
-    .header .navigation ul{
-        display: table;
-        margin: 0 auto;
-        padding: 0 ;
-        width: min(800px,80%);
-        text-align: center;
-    }
-    .header .navigation li{
-        display: table-cell;
-        padding: 0 auto;
-        width :50%;
-        background-color: rgb(130, 130, 130);
-    }
-    .header .navigation a{
-        display: block;
-        text-decoration: none;
-        color: white;
-        padding-bottom: 0px;
-    }
-    .header .navigation a:hover{
-        display: block;
-        text-decoration: none;
-        color: rgba(15, 15, 15, 0.85);
-        padding-bottom: 0px;
-    }
-    .header .navigation li:hover{
-        background-color: rgb(235, 235, 235);
-    }
-}
