@@ -13,7 +13,7 @@ const Tag = ({ pageContext,data}) => {
     const { edges } = data.allMarkdownRemark
   return (
     <Layout>
-    <h1 className='listTitle'>{`タグ：${_.kebabCase(tag)}　記事一覧`}</h1>
+    <h1 className='listTitle'>{`タグ：${_.kebabCase(tag)}`}</h1>
     <div className='box'>
       {/* 投稿したページをリスト化して表示する部分 */}
       {edges.map(( edge )=>(

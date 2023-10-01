@@ -4,6 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import * as styles from './styles/sidebar.module.css';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import Tag  from './alltag';
+import Category  from './allcategory';
 const _ = require("lodash")
 
 const Sidebar = () => {
@@ -54,8 +55,10 @@ const Sidebar = () => {
 
         ))}</div>
         
-        
+        <Category/>
         <Tag/>
+        
+
 
     </sidebar>
    );
