@@ -1,7 +1,7 @@
 ---
 title: 'Gatsbyを使って自作ブログを作る〜その２：ブログレイアウトの作成〜'
 date: '2023-10-02'
-slug: 'gatsby-blog-setup'
+slug: 'gatsby-blog-create-layout'
 hero_image: '../images/gatsby_icon.png'
 category: '自作ブログの作り方'
 tags: ['Gatsby']
