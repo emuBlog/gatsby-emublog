@@ -3,11 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `えむのあれこれ`,
+    title: `emuism`,
     Author:`えむ@駆け出しエンジニア`,
     categoty:[`IT`,`お金`,`趣味`],
-    user:{ name:`Sora`, email:`bakara@yahoo.co.jp`}
-    // siteUrl: `https://www.yourdomain.tld`,
+    user:{ name:`Sora`, email:`bakara@yahoo.co.jp`},
+    siteUrl: `https://emuism.netlify.app`,
   },
   plugins: [
     {
@@ -38,6 +38,26 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`, //サイトマップをルートディレクトリ直下に出力するようなオプション
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://emuism.netlify.app`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt', // 追加
+      options: {
+        host: 'https://emuism.netlify.app',
+        sitemap: 'https://emuism.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
