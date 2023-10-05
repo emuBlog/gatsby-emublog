@@ -1,21 +1,16 @@
-exports.onPreRenderHTML = function onPreRenderHTML({
-  getHeadComponents,
-  replaceHeadComponents,
-}) {
-  const headComponents = getHeadComponents();
-  headComponents.sort((a, b) => {
-    if (a.type === b.type || (a.type !== 'meta' && b.type !== 'meta')) {
-      return 0;
-    }
+exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
+  if (process.env.NODE_ENV !== "production") return;
 
-    if (a.type === 'meta') {
-      return -1;
-    } else if (b.type === 'meta') {
-      return 1;
-    }
+  let hc = getHeadComponents();
+  hc.forEach(el => {
+    if (el.type === "style") {
+      el.type = "link";
+      el.props["href"] = el.props["data-href"];
+      el.props["rel"] = "stylesheet";
+      el.props["type"] = "text/css";
 
-    return 0;
+      delete el.props["data-href"];
+      delete el.props["dangerouslySetInnerHTML"];
+    }
   });
-
-  replaceHeadComponents(headComponents);
 };
