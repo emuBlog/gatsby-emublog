@@ -63,7 +63,7 @@ query($category: String){
               gatsbyImageData(width: 200, height: 200)
             }
           }
-          article_explain
+          description
         }
         html
         id

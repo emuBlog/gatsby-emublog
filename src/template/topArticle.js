@@ -5,6 +5,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import categoryLogo from '../images/common/category.png';
 import tagLogo from '../images/common/tag.png';
 import dateLogo from '../images/common/date.png';
+import Seo from '../components/seo';
 
 const _ = require("lodash")
 
@@ -13,6 +14,8 @@ const TopArticle = ({ pageContext, data:{ markdownRemark } }) => {
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
   return (
+    <>
+    <Seo title = {frontmatter.title} description={frontmatter.description} image = {frontmatter.hero_image} article="{false}"/>
     <Layout>
       {/* <GatsbyImage image={image} alt="Hero Image" /> */}
       <h1 className='pagetitle'>{frontmatter.title}</h1>
@@ -27,6 +30,8 @@ const TopArticle = ({ pageContext, data:{ markdownRemark } }) => {
           </div>
       <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
+    </>
+
   );
 }
 //date(formatString: "MMMM DD, YYYY")
@@ -40,11 +45,13 @@ export const query = graphql`
         title
         category
         tags
+        ogpImgPath
         hero_image {
           childImageSharp {
             gatsbyImageData
           }
         }
+        description
       }
     }
   }

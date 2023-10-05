@@ -2,10 +2,10 @@
 title: '初投稿！'
 date: '2023-09-13'
 slug: 'first'
-hero_image: '../../../images/noImage.png'
+hero_image: './noImage.png'
 category: '自作ブログ'
 tags: ['筆者について']
-article_explain: 'ブログを始めた理由について話してます。'
+description: 'ブログを始めた理由について話してます。'
 ---
 
 ## ブログ、始めました。

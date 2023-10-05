@@ -4,10 +4,15 @@
 module.exports = {
   siteMetadata: {
     title: `emuism`,
-    Author:`えむ@駆け出しエンジニア`,
-    categoty:[`IT`,`お金`,`趣味`],
+    author: {
+      name: `えむ`,
+      summary: `駆け出しエンジニア`,
+    },
     user:{ name:`Sora`, email:`bakara@yahoo.co.jp`},
-    siteUrl: `https://emuism.netlify.app`,
+    description: `技術ブログだけでなく、生活や仕事の質を向上するアイデアを公開するブログです。`,
+    image: '/XXX.jpg',
+    siteUrl: `https://emuism.netlify.app/`,
+    twitterUsername: `えむ@ひよっこエンジニア`,
   },
   plugins: [
     {
@@ -28,6 +33,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/common/favicon.png`, // 使用するファビコン画像のパス
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -38,6 +49,55 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `{
+              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+                nodes {
+                  excerpt
+                  html
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    date
+                  }
+                }
+              }
+            }`,
+            output: "/rss.xml",
+            title: "Gatsby Starter Blog RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {

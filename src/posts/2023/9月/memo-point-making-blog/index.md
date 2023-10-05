@@ -2,10 +2,10 @@
 title: '【忘備録】ブログを作る流れや苦戦したところ'
 date: '2023-09-19'
 slug: 'memo-point-making-blog'
-hero_image: '../../../images/2023/9月/19日/kusen.png'
+hero_image: './kusen.png'
 category: '自作ブログ'
 tags: ['忘備録']
-article_explain: 'ブログ作成の大まかな手順のメモ'
+description: 'ブログ作成の大まかな手順のメモ'
 ---
 
 ## 忘備録です

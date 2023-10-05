@@ -2,10 +2,10 @@
 title: 'もう鍵を無くさない！予防策と無くした場合の対処方法について'
 date: '2023-10-04'
 slug: 'lost-key'
-hero_image: '../../../images/2023/10月/4日/lost-key.png'
+hero_image: './lost-key.png'
 category: 'おすすめアイテム'
 tags: ['便利グッズ','生活']
-article_explain: '鍵を無くさない方法について、筆者の経験談より。'
+description: '鍵を無くさない方法について、筆者の経験談より。'
 ---
 
 こんにちは、えむです！<br>

@@ -61,7 +61,7 @@ export const query = graphql`
               }
             }
             date
-            article_explain
+            description
           }
           html
           id

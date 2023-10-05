@@ -28,7 +28,7 @@ const PostList = () => {
                         gatsbyImageData(width: 400, height: 250)
                       }
                     }
-                    article_explain
+                    description
                   }
                 }
               }
