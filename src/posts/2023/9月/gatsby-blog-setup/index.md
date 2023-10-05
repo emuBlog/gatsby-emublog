@@ -51,7 +51,7 @@ homebrewとはパッケージ管理システムです。<br>
 homebrewのインストールは非常に簡単です。
 [homebrew公式サイト](https://brew.sh/)にアクセスして、以下のコードをコピペしてターミナルで実行するだけです。
 
-![](../../../images/homebrew.png)
+![](./homebrew.png)
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -187,7 +187,7 @@ success Writing page-data.json and slice-data.json files to public directory - 0
 ```
 起動できたら、http://localhost:8000/ にアクセスしてみてください。これはローカルでサーバが起動しているときにのみアクセスできるURLです。<br>
 下のような画面が表示されれば(画像サイズあとで調整します。。。)、テンプレートが上手く動き開発環境が整った、ということになります。
-![](../../../images/gatsby_starter.png)
+![](./gatsby_starter.png)
 あとは、作成したプロジェクト内のコードを色々編集して、自分好みのwebサイトに作り替えていけばいいわけです！
 
 ## まとめ

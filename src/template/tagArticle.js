@@ -13,9 +13,10 @@ const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
   const { id } = pageContext
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
+  const imagePath = frontmatter.featuredimage?.childImageSharp?.gatsbyImageData?.images?.fallback?.src || ""
   return (
     <>
-     <Seo title = {frontmatter.title} description={frontmatter.description} image = {frontmatter.hero_image} article="{false}"/>
+     <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} article="{false}"/>
       <Layout>
         {/* <GatsbyImage image={image} alt="Hero Image" /> */}
 
