@@ -10,7 +10,7 @@ module.exports = {
     },
     user:{ name:`Sora`, email:`bakara@yahoo.co.jp`},
     description: `技術ブログだけでなく、生活や仕事の質を向上するアイデアを公開するブログです。`,
-    image: '/defaultOgImage.png',
+    image: '/static/defaultOgImage.png',
     siteUrl: `https://emuism.netlify.app`,
     twitterUsername: `えむ@ひよっこエンジニア`,
     type:`website`,
