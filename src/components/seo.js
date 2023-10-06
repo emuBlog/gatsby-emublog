@@ -11,7 +11,7 @@ import {Helmet} from "react-helmet";
 import { useLocation } from "@reach/router"
 import PropTypes from 'prop-types';
 
-const Seo = ({ title, description, image, article }) => {
+const Seo = ({ title, description, image, type }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +21,7 @@ const Seo = ({ title, description, image, article }) => {
             defaultDescription: description
             siteUrl: siteUrl
             defaultImage: image
+            defaultType: type
             twitterUsername
           }
         }
@@ -32,6 +33,7 @@ const Seo = ({ title, description, image, article }) => {
     defaultDescription,
     siteUrl,
     defaultImage,
+    defaultType,
     twitterUsername,
   } = site.siteMetadata;
 
@@ -41,6 +43,7 @@ const Seo = ({ title, description, image, article }) => {
     title: title ? `${title} | ${defaultTitle}` : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
+    type: type|| defaultType,
     url: `${siteUrl}${pathname}`,
   };
   
@@ -52,7 +55,7 @@ const Seo = ({ title, description, image, article }) => {
     <meta name="description" content={seo.description} />
     <meta name="image" content={seo.image} />
     {seo.url && <meta property="og:url" content={seo.url} />}
-    {(article ? true : null) && <meta property="og:type" content="article" />}
+    <meta property="og:type" content={seo.type} />
     {seo.title && <meta property="og:title" content={seo.title} />}
     {seo.description && (
       <meta property="og:description" content={seo.description} />
@@ -75,5 +78,5 @@ Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  article: PropTypes.bool,
+  type: PropTypes.string,
 }

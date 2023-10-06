@@ -13,6 +13,7 @@ module.exports = {
     image: '/images/favicon.png',
     siteUrl: `https://emuism.netlify.app`,
     twitterUsername: `えむ@ひよっこエンジニア`,
+    type:`website`,
   },
   plugins: [
     {

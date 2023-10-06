@@ -16,7 +16,7 @@ const CategoryArticle = ({ pageContext, data: { markdownRemark }  }) => {
   const imagePath = frontmatter.featuredimage?.childImageSharp?.gatsbyImageData?.images?.fallback?.src || ""
   return (
     <>
-    <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} article="{false}"/>
+    <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} type="article"/>
       <Layout>
         {/* <GatsbyImage image={image} alt="Hero Image" /> */}
         <h1 className='pagetitle'>{frontmatter.title}</h1>

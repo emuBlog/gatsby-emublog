@@ -5,12 +5,16 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import categoryLogo from '../images/common/category.png';
 import tagLogo from '../images/common/tag.png';
 import dateLogo from '../images/common/date.png';
+import Seo from '../components/seo';
 const _ = require("lodash")
+
 
 const Category = ({ pageContext,data}) => {
     const { category } = pageContext
     const { edges } = data.allMarkdownRemark
   return (
+    <>
+    <Seo type="article"/>
     <Layout>
     <h1 className='listTitle'>{`カテゴリ：${_.kebabCase(category)}`}</h1>
     <div className='box'>
@@ -44,6 +48,8 @@ const Category = ({ pageContext,data}) => {
     </div>
         
     </Layout>
+    </>
+    
   );
 };
 export const query = graphql`
