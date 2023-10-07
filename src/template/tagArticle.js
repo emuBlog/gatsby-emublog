@@ -13,7 +13,7 @@ const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
   const { id } = pageContext
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
-  const imagePath = frontmatter.featuredimage?.childImageSharp?.gatsbyImageData?.images?.fallback?.src || ""
+  const imagePath = frontmatter.hero_image.childImageSharp.original.src;
   return (
     <>
     <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} type="article"/>
@@ -51,6 +51,9 @@ export const query = graphql`
         hero_image {
           childImageSharp {
             gatsbyImageData
+            original {
+              src
+            }
           }
         }
         description
