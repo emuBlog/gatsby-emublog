@@ -2,7 +2,7 @@
 title: 'Gatsbyを使って自作ブログを作る〜その２：ヘッダーとフッターの作成〜'
 date: '2023-10-02'
 slug: 'gatsby-blog-create-layout'
-hero_image: './gatsby_icon.png'
+hero_image: './gatsby-layout.png'
 category: 'blog'
 tags: ['Gatsby']
 description: 'Gatsbyを使ってヘッダーとフッターを作成'

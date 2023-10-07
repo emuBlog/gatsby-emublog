@@ -24,8 +24,8 @@
 }
 .article .frame {
   vertical-align: middle;
-  margin: 0px;
-  padding: 0px;
+  margin: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 5px;
   overflow: hidden;
   position: relative;
 }
@@ -69,8 +69,8 @@
     vertical-align: middle;
     width: 150px; /*画像サイズ指定*/
     min-width: 150px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 5px;
     overflow: hidden;
     position: relative;
   }

@@ -2,7 +2,7 @@
 title: 'Gatsbyを使って自作ブログを作る〜その１：環境構築〜'
 date: '2023-09-30'
 slug: 'gatsby-blog-setup'
-hero_image: './gatsby_icon.png'
+hero_image: './gatsby-setup.png'
 category: 'blog'
 tags: ['Gatsby']
 description: 'Gatsbyの開発環境を整える方法を書いてます。'

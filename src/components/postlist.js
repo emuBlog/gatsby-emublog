@@ -25,7 +25,7 @@ const PostList = () => {
                     tags
                     hero_image {
                       childImageSharp {
-                        gatsbyImageData(width: 400, height: 250)
+                        gatsbyImageData(width: 400, height: 210)
                       }
                     }
                     description

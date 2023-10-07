@@ -39,9 +39,9 @@ const Sidebar = () => {
         <div className={styles.box}>{/* 投稿したページをリスト化して表示する部分s */}
         {data.allMarkdownRemark.edges.map((edge) =>(
             <div key={edge.node.id} className = {styles.article}>
-                <Link to={`/${edge.node.frontmatter.slug}`} className={styles.frame}>
+                <Link to={`/${edge.node.frontmatter.slug}`}>
                     {/* mdファイルで指定したhero_imageの画像を表示 */}
-                    <div　><GatsbyImage image={getImage(edge.node.frontmatter.hero_image)} alt="Hero Image" /></div>
+                    <div　 className={styles.frame}><GatsbyImage image={getImage(edge.node.frontmatter.hero_image)} alt="Hero Image" /></div>
                 </Link>
                 <div className={styles.right}>
                     <p className={styles.title}>
