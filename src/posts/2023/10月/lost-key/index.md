@@ -3,8 +3,8 @@ title: 'もう鍵を無くさない！予防策と無くした場合の対処方
 date: '2023-10-04'
 slug: 'lost-key'
 hero_image: './lost-key.png'
-category: 'おすすめアイテム'
-tags: ['便利グッズ','生活']
+category: 'lifestyle'
+tags: ['goods']
 description: '鍵を無くさない方法について、筆者の経験談より。'
 ---
 
