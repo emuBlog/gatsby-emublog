@@ -214,6 +214,10 @@ a {
   grid-template-columns:1fr 1fr 1fr;
 }
 }
+.shs_share{
+  margin: 0px auto;
+  text-align:center;
+}
 @media screen and (min-width:1200px) {
   .main{
     display:flex;

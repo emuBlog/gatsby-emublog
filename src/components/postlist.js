@@ -4,7 +4,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import categoryLogo from '../images/common/category.png';
 import tagLogo from '../images/common/tag.png';
 import dateLogo from '../images/common/date.png';
-// import * as styles from './styles/postlist.module.css';
+
 const _ = require("lodash")
 
 const PostList = () => {

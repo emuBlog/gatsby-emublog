@@ -6,14 +6,18 @@ import categoryLogo from '../images/common/category.png';
 import tagLogo from '../images/common/tag.png';
 import dateLogo from '../images/common/date.png';
 import Seo from '../components/seo';
+import Share from '../components/share';
+import { useLocation } from "@reach/router";
 
 const _ = require("lodash")
 
-const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
+const TagArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
   const { id } = pageContext
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
   const imagePath = frontmatter.hero_image.childImageSharp.original.src;
+  const { pathname } = useLocation();
+  const url = `${site.siteMetadata.siteUrl}${pathname}`;
   return (
     <>
     <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} type="article"/>
@@ -31,7 +35,11 @@ const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
               
         </div>
         <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
-        <div className='postdate'>投稿日：{frontmatter.date}</div>
+
+        <div className='shs_share'>
+        <h3>SNSでシェア</h3>
+        <Share title={frontmatter.title} url={url} />
+      </div>
       </Layout>
     </>
     
@@ -40,6 +48,11 @@ const TagArticle = ({ pageContext, data:{ markdownRemark } }) => {
 //date(formatString: "MMMM DD, YYYY")
 export const query = graphql`
   query($id: String!){
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
