@@ -11,7 +11,7 @@ const Sidebar = () => {
   const data = useStaticQuery(
     graphql`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark(sort: {frontmatter: {date: DESC}},limit: 5) {
             edges {
                 node {
                 id

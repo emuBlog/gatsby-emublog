@@ -11,7 +11,7 @@ const PostList = () => {
     const data = useStaticQuery(
         graphql`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
               edges {
                 node {
                   id

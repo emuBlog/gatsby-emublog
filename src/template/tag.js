@@ -50,7 +50,7 @@ const Tag = ({ pageContext,data}) => {
 };
 export const query = graphql`
   query($tag: String){
-    allMarkdownRemark(filter: {frontmatter: {tags: {in: [$tag]}}}) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, filter: {frontmatter: {tags: {in: [$tag]}}}) {
       edges {
         node {
           frontmatter {
