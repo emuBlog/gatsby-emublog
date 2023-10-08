@@ -38,7 +38,7 @@ const TopArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
       <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
       <div className='shs_share'>
         <h3>SNSでシェア</h3>
-        <Share title={frontmatter.title} url={url} />
+        <Share title={frontmatter.title} articleUrl={url} />
       </div>
       
     </Layout>
