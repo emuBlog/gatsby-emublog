@@ -66,6 +66,7 @@ a {
 }
 .main .contents {
     display: flex;
+    flex-flow: column;
     /* align-items:stretch;  */
     flex-wrap:wrap;
     width: 100%;
@@ -176,6 +177,13 @@ a {
   padding: 0px 0px;
   border-radius: 10px 10px 10px 10px;
 }
+.shs_share{
+  /* display: flex; */
+  display: border-box;
+  margin: 0px auto;
+  text-align:center;
+}
+
 @media screen and (min-width:500px) {
   .main{
     display:flex;
@@ -214,10 +222,7 @@ a {
   grid-template-columns:1fr 1fr 1fr;
 }
 }
-.shs_share{
-  margin: 0px auto;
-  text-align:center;
-}
+
 @media screen and (min-width:1200px) {
   .main{
     display:flex;

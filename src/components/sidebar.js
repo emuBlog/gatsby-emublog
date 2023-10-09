@@ -5,6 +5,7 @@ import * as styles from './styles/sidebar.module.css';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import Tag  from './alltag';
 import Category  from './allcategory';
+import Bio  from './bio';
 const _ = require("lodash")
 
 const Sidebar = () => {
@@ -35,6 +36,7 @@ const Sidebar = () => {
   );
   return (
     <sidebar>
+        <Bio/>
         <h1 className={styles.listTitle}>最新記事</h1>
         <div className={styles.box}>{/* 投稿したページをリスト化して表示する部分s */}
         {data.allMarkdownRemark.edges.map((edge) =>(
