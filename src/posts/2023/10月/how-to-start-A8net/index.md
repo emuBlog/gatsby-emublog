@@ -2,7 +2,7 @@
 title: 'すぐにアフィリエイトを始める方法！A8.netの登録方法'
 date: '2023-10-07'
 slug: 'how-to-start-A8net'
-hero_image: './noImage.png'
+hero_image: './affiliate.png'
 category: 'blog'
 tags: ['affiliate','side job']
 description: 'A8.netを使って手軽にアフィリエイトを始める！'

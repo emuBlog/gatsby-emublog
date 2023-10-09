@@ -135,7 +135,7 @@ a {
   display: border-box;
   width: 98%;
   margin: 5px auto 5px auto;
-  padding: 0px 0px;
+  padding: 5px 0px;
   background-color: white;
   align-items: center;
   border-radius: 10px 10px 10px 10px;
