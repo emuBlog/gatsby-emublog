@@ -183,6 +183,12 @@ a {
   margin: 0px auto;
   text-align:center;
 }
+.afiliate-message{
+  text-align: right;
+  color: rgba(140,140,140);
+  font-size: 80%;
+  padding: 0px 0px 0px 0px;
+}
 
 @media screen and (min-width:500px) {
   .main{
@@ -221,6 +227,12 @@ a {
   height:fit-content;
   grid-template-columns:1fr 1fr 1fr;
 }
+.afiliate-message{
+  text-align: right;
+  color: rgba(140,140,140);
+  font-size: 80%;
+  padding: 0px 70px 0px 0px;
+}
 }
 
 @media screen and (min-width:1200px) {
@@ -246,5 +258,11 @@ a {
     margin: 0px 0px;
     padding: 0px 0px;
     border-radius: 10px 10px 10px 10px;
+  }
+  .afiliate-message{
+    text-align: right;
+    color: rgba(140,140,140);
+    font-size: 80%;
+    padding: 0px 70px 0px 0px;
   }
 }

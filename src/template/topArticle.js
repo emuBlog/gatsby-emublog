@@ -34,7 +34,7 @@ const TopArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
             ))}
             
           </div>
-          
+      <div className='afiliate-message'>＊当サイトはアフィリエイト広告を利用しています</div>
       <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
       <div className='shs_share'>
         <h3>SNSでシェア</h3>
