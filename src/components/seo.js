@@ -52,7 +52,6 @@ const Seo = ({ title, description, image, type }) => {
   <Helmet>
     <html lang="ja" />
     <title>{seo.title}</title>
-    <meta name="google-adsense-account" content="ca-pub-7251602196940306"></meta>
     <meta name="description" content={seo.description} />
     <meta name="image" content={seo.image} />
     {seo.url && <meta property="og:url" content={seo.url} />}
