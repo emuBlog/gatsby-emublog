@@ -1,5 +1,5 @@
 ---
-title: 'Gatsbyを使って自作ブログを作る〜その１：環境構築〜'
+title: 'Gatsbyを使ってブログ作成を始める方法'
 date: '2023-09-30'
 slug: 'gatsby-blog-setup'
 hero_image: './gatsby-setup.png'
@@ -186,7 +186,7 @@ success Building development bundle - 12.755s
 success Writing page-data.json and slice-data.json files to public directory - 0.126s - 3/8 63.26/s
 ```
 起動できたら、http://localhost:8000/ にアクセスしてみてください。これはローカルでサーバが起動しているときにのみアクセスできるURLです。<br>
-下のような画面が表示されれば(画像サイズあとで調整します。。。)、テンプレートが上手く動き開発環境が整った、ということになります。
+下のような画面が表示されれば、テンプレートが上手く動き開発環境が整った、ということになります。
 ![](./gatsby_starter.png)
 あとは、作成したプロジェクト内のコードを色々編集して、自分好みのwebサイトに作り替えていけばいいわけです！
 
