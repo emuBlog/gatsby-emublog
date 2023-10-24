@@ -11,8 +11,9 @@ import { useLocation } from "@reach/router";
 
 const _ = require("lodash")
 
-const TagArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
+const TopArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
   const { id } = pageContext
+  const {route} = pageContext
   const { frontmatter, html } = markdownRemark;
   const image = getImage(frontmatter.hero_image);
   const imagePath = frontmatter.hero_image.childImageSharp.original.src;
@@ -21,28 +22,29 @@ const TagArticle = ({ pageContext, data:{ markdownRemark,site } }) => {
   return (
     <>
     <Seo title = {frontmatter.title} description={frontmatter.description} image = {imagePath} type="article"/>
-      <Layout>
-        {/* <GatsbyImage image={image} alt="Hero Image" /> */}
 
-        <h1 className='pagetitle'>{frontmatter.title}</h1>
-        <div className='mini-info'>
-            <div className='mini-info-item-box'><div class = "logo"><img src = {dateLogo} alt = "日付アイコン"　width="20px" height = "20px"/></div>{frontmatter.date}</div>
-            <Link to={`/category/${_.kebabCase(frontmatter.category)}/`}>
-              <div className='mini-info-item-box'><div class="logo"><img src={categoryLogo} alt="カテゴリアイコン" width="20px" height="20px" /></div>{frontmatter.category}</div></Link>
-              {frontmatter.tags.map(tag => (
-              <Link to={`/tag/${_.kebabCase(tag)}/`}><div className='mini-info-item-box'><div class="logo"><img src={tagLogo} alt="タグアイコン" width="20px" height="20px" /></div>{tag}</div></Link>
-              ))}
-              
-        </div>
-        <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
-
-        <div className='shs_share'>
+    <Layout>
+      {/* <GatsbyImage image={image} alt="Hero Image" /> */}
+      <h1 className='pagetitle'>{frontmatter.title}</h1>
+      <div className='mini-info'>
+          <div className='mini-info-item-box'><div class = "logo"><img src = {dateLogo} alt = "日付アイコン"　width="20px" height = "20px"/></div>{frontmatter.date}</div>
+          <Link to={`/category/${_.kebabCase(frontmatter.category)}/`}>
+            <div className='mini-info-item-box'><div class="logo"><img src={categoryLogo} alt="カテゴリアイコン" width="20px" height="20px" /></div>{frontmatter.category}</div></Link>
+            {frontmatter.tags.map(tag => (
+            <Link to={`/tag/${_.kebabCase(tag)}/`}><div className='mini-info-item-box'><div class="logo"><img src={tagLogo} alt="タグアイコン" width="20px" height="20px" /></div>{tag}</div></Link>
+            ))}
+            
+          </div>
+      <div className='afiliate-message'>＊当サイトはアフィリエイト広告を利用しています</div>
+      <div className='body' dangerouslySetInnerHTML={{ __html: html }} />
+      <div className='shs_share'>
         <h3>SNSでシェア</h3>
         <Share title={frontmatter.title} articleUrl={url} />
       </div>
-      </Layout>
+      
+    </Layout>
     </>
-    
+
   );
 }
 //date(formatString: "MMMM DD, YYYY")
@@ -74,4 +76,4 @@ export const query = graphql`
     }
   }
 `
-export default TagArticle ;
+export default TopArticle ;

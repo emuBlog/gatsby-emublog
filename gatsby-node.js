@@ -4,9 +4,7 @@ const _ = require("lodash")
 
 const categoryPath = path.resolve(`src/template/category.js`)
 const tagPath = path.resolve(`src/template/tag.js`)
-const topArticlepath = path.resolve(`src/template/topArticle.js`)
-const categoryArticlepath = path.resolve(`src/template/categoryArticle.js`)
-const tagArticlepath = path.resolve(`src/template/tagArticle.js`)
+const Articlepath = path.resolve(`src/template/Article.js`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -97,9 +95,10 @@ exports.createPages = async ({ graphql, actions }) => {
   resultTopCategoryArticle.data.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/${node.frontmatter.slug}`,
-      component: topArticlepath,
+      component: Articlepath,
       context: {
-        id: node.id
+        id: node.id,
+        route:"/",
       },
     })
   })
@@ -107,9 +106,10 @@ exports.createPages = async ({ graphql, actions }) => {
   resultTopCategoryArticle.data.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/category/${_.kebabCase(node.frontmatter.category)}/${node.frontmatter.slug}`,
-      component: categoryArticlepath,
+      component: Articlepath,
       context: {
-        id: node.id
+        id: node.id,
+        route:"/category/",
       },
     })
   })
@@ -119,9 +119,10 @@ exports.createPages = async ({ graphql, actions }) => {
     group.nodes.forEach((node) => {
       createPage({
         path: `/tag/${_.kebabCase(tmp)}/${node.frontmatter.slug}`,
-        component: tagArticlepath,
+        component: Articlepath,
         context: {
-          id: node.id
+          id: node.id,
+          route:"/tag/",
         },
       })
     })
