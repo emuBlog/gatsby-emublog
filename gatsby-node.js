@@ -4,7 +4,7 @@ const _ = require("lodash")
 
 const categoryPath = path.resolve(`src/template/category.js`)
 const tagPath = path.resolve(`src/template/tag.js`)
-const Articlepath = path.resolve(`src/template/Article.js`)
+const articlePath = path.resolve(`src/template/Article.js`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -70,24 +70,27 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `)
-    
 
   resultCategories.data.allMarkdownRemark.distinct.forEach((category) => {
     createPage({
       path: `/category/${_.kebabCase(category)}`,
       component: categoryPath,
       context: {
-        category: category
+        category: category,
+        tag: '',
+        route:'/category/'
       },
     })
   })
 
-  resultTags .data.allMarkdownRemark.distinct.forEach((tag) => {
+  resultTags.data.allMarkdownRemark.distinct.forEach((tag) => {
     createPage({
       path: `/tag/${_.kebabCase(tag)}`,
       component: tagPath,
       context: {
-        tag: tag
+        category: '',
+        tag: tag,
+        route:'/tag/'
       },
     })
   })
@@ -95,7 +98,7 @@ exports.createPages = async ({ graphql, actions }) => {
   resultTopCategoryArticle.data.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/${node.frontmatter.slug}`,
-      component: Articlepath,
+      component: articlePath,
       context: {
         id: node.id,
         route:"/",
@@ -106,7 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
   resultTopCategoryArticle.data.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/category/${_.kebabCase(node.frontmatter.category)}/${node.frontmatter.slug}`,
-      component: Articlepath,
+      component: articlePath,
       context: {
         id: node.id,
         route:"/category/",
@@ -119,7 +122,7 @@ exports.createPages = async ({ graphql, actions }) => {
     group.nodes.forEach((node) => {
       createPage({
         path: `/tag/${_.kebabCase(tmp)}/${node.frontmatter.slug}`,
-        component: Articlepath,
+        component: articlePath,
         context: {
           id: node.id,
           route:"/tag/",
