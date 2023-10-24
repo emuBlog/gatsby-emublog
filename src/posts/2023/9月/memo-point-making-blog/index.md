@@ -3,8 +3,8 @@ title: '【忘備録】ブログを作る流れや苦戦したところ'
 date: '2023-09-19'
 slug: 'memo-point-making-blog'
 hero_image: './kusen.png'
-category: 'blog'
-tags: ['memo']
+category: 'IT'
+tags: ['Gatsby','blog']
 description: 'ブログ作成の大まかな手順のメモ'
 ---
 

@@ -3,8 +3,8 @@ title: '初投稿！'
 date: '2023-09-13'
 slug: 'first'
 hero_image: './noImage.png'
-category: 'blog'
-tags: ['Author']
+category: 'IT'
+tags: ['blog','Gatsby']
 description: 'ブログを始めた理由について話してます。'
 ---
 

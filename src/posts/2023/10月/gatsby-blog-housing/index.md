@@ -3,8 +3,8 @@ title: 'Gatsbyで作成したブログを無料で簡単に公開する方法！
 date: '2023-10-19'
 slug: 'gatsby-blog-housing'
 hero_image: './thumbnail.png'
-category: 'blog'
-tags: ['Gatsby','Netlify']
+category: 'IT'
+tags: ['Gatsby','Netlify','blog']
 description: 'Gatsbyで作成したブログを一般公開する方法をまとめてみました。'
 ---
 

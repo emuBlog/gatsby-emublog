@@ -3,8 +3,8 @@ title: 'Gatsbyを使ってブログ作成を始める方法'
 date: '2023-09-30'
 slug: 'gatsby-blog-setup'
 hero_image: './gatsby-setup.png'
-category: 'blog'
-tags: ['Gatsby']
+category: 'IT'
+tags: ['Gatsby','blog']
 description: 'Gatsbyの開発環境を整える方法を書いてます。'
 ---
 
